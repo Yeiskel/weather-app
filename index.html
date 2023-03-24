@@ -11,12 +11,12 @@
 	<body class="bg-[#0C1C3C]">
 		<div
 			id="app"
-			class="h-screen flex justify-center flex-col gap-y-10 mx-auto items-center w-[80%]"
+			class="flex items-center flex-col gap-y-10 mx-auto md:flex-wrap w-full h-screen sm:w-[80%] pt-[50%] px-2 md:py-2 md:justify-center"
 		>
 			<h1 class="text-slate-300 text-6xl text-center font-bold">
 				Simple Weather App
 			</h1>
-			<div class="">
+			<div class="flex">
 				<input
 					id="city-input"
 					type="text"
@@ -31,7 +31,7 @@
 			</div>
 			<div
 				id="card-container"
-				class="flex flex-row gap-6 flex-wrap justify-center"
+				class="flex sm:flex-row flex-col gap-6 flex-wrap justify-center"
 			></div>
 		</div>
 		<script type="module" src="./src/main.js"></script>
