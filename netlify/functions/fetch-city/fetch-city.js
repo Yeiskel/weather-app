@@ -3,7 +3,7 @@ const dotenv = require("dotenv").config();
 
 const handler = async (event) => {
 	const { city } = event.queryStringParameters;
-	const API_KEY = process.env;
+	const API_KEY = process.env.API_KEY;
 
 	const url = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${API_KEY}`;
 	try {
