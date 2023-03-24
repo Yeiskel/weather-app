@@ -1,5 +1,4 @@
 const axios = require("axios");
-// const dotenv = require("dotenv").config();
 
 const handler = async (event) => {
 	const { lat, lon } = event.queryStringParameters;
