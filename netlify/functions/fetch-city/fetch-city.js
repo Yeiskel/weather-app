@@ -1,0 +1,25 @@
+const axios = require("axios");
+const dotenv = require("dotenv").config();
+
+const handler = async (event) => {
+	const { city } = event.queryStringParameters;
+	const API_KEY = process.env.API_KEY;
+	// const API_KEY = "26a8e6369da9f4a29fbd9d80c9582b9a";
+
+	const url = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${API_KEY}`;
+	try {
+		const { data } = await axios.get(url);
+		return {
+			statusCode: 200,
+			body: JSON.stringify(data),
+		};
+	} catch (error) {
+		const { status, statusText, headers, data } = error.response;
+		return {
+			statusCode: status,
+			body: JSON.stringify({ status, statusText, headers, data }),
+		};
+	}
+};
+
+module.exports = { handler };

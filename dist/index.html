@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+
+		<title>Weather App</title>
+		<script type="module" crossorigin src="/assets/index-9856d03b.js"></script>
+		<link rel="stylesheet" href="/assets/index-6cfbb562.css">
+	</head>
+	<body class="bg-[#0C1C3C]">
+		<div
+			id="app"
+			class="h-screen flex justify-center flex-col gap-y-10 mx-auto items-center w-[80%]"
+		>
+			<h1 class="text-slate-300 text-6xl text-center font-bold">
+				Simple Weather App
+			</h1>
+			<div class="">
+				<input
+					id="city-input"
+					type="text"
+					placeholder="Search for a city"
+					class="bg-transparent text-slate-200 text-lg placeholder:text-slate-200 border-b-slate-300 border-solid border-b-2 focus:outline-none"
+				/>
+				<button
+					class="bg-[#FF1B37] rounded-md py-2 px-4 text-slate-300 font-medium ml-2"
+				>
+					SUBMIT
+				</button>
+			</div>
+			<div
+				id="card-container"
+				class="flex flex-row gap-6 flex-wrap justify-center"
+			></div>
+		</div>
+		
+	</body>
+</html>
